@@ -29,14 +29,18 @@ public class CodeGenerator {
                 })
                 .packageConfig(builder -> {
                     builder.parent("com.example.springbootdemo")
-                            .moduleName("")
+                            .moduleName(null)
                             .pathInfo(Collections.singletonMap(OutputFile.mapperXml, "/Users/jinziguan/Desktop/SpringBootDemo/src/main/resources/mapper/"));
                 })
                 .strategyConfig(builder -> {
+                    builder.entityBuilder().enableLombok();
+                    builder.mapperBuilder().enableMapperAnnotation().build();
+                    builder.controllerBuilder().enableHyphenStyle() // 开启驼峰转接
+                            .enableRestStyle(); // 开启生成@RestController控制器
                     builder.addInclude("sys_user")
-                            .addTablePrefix("t_", "sys_");
+                            .addTablePrefix("sys_");
                 })
-                .templateEngine(new FreemarkerTemplateEngine())
+//                .templateEngine(new FreemarkerTemplateEngine())
                 .execute();
     }
 }
