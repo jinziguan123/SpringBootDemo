@@ -1,5 +1,7 @@
 package com.example.springbootdemo.service;
 
+import com.example.springbootdemo.common.Result;
+import com.example.springbootdemo.controller.dto.UserDto;
 import com.example.springbootdemo.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IUserService extends IService<User> {
 
+    UserDto login(UserDto userDto);
+
+    User register(UserDto userDto);
 }
