@@ -15,7 +15,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
         // 拦截所有请求，通过判断是否带有@LoginRequired注释来决定是否需要登录
         registry.addInterceptor(jwtInterceptor())
                 .addPathPatterns("/**")
-                .excludePathPatterns("/user/login", "/user/register", "/**/export", "/**/import");
+                .excludePathPatterns("/user/login", "/user/register", "/**/export", "/**/import", "/file/**");
     }
 
     @Bean

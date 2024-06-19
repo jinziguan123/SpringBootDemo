@@ -33,6 +33,7 @@ export default {
   name: "Header",
   props:{
     collapseBtnClass: String,
+    user: Object
   },
   methods: {
     collapse(){
@@ -51,7 +52,7 @@ export default {
   },
   data(){
     return{
-      user: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {}
+
     }
   },
   watch:{

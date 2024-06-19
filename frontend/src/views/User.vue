@@ -1,9 +1,6 @@
 <template>
   <div>
-<!--    <div style="border-left: aqua">-->
-<!--      -->
-<!--    </div>-->
-    <div style="padding: 10px 0">
+    <div style="margin: 10px 0">
       <el-input style="width: 200px" placeholder="请输入名称" prefix-icon="el-icon-search"
                 v-model="username"></el-input>
       <el-input style="width: 200px; margin-left: 5px" placeholder="请输入邮箱" prefix-icon="el-icon-message"

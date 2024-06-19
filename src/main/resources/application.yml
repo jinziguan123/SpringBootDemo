@@ -20,3 +20,7 @@ mybatis:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+files:
+  upload:
+    path: /Users/jinziguan/Desktop/SpringBootDemo/files/

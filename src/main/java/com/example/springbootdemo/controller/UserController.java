@@ -115,10 +115,6 @@ public class UserController {
             queryWrapper.like("address", address);
         }
 
-        User currentUser = TokenUtils.getCurrentUser();
-
-        System.out.println("====================看这里==============" + currentUser.getUsername());
-
         return Result.success(userService.page(new Page<>(pageNum, pageSize), queryWrapper));
     }
 
